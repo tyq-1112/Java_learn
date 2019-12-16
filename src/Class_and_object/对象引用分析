@@ -1,0 +1,10 @@
+
+   类 属于引用数据类型，
+
+   同一块堆内存的空间可以被不同的栈内存所指向，也可以更换指向
+
+   Person per1 = new Person();
+   per1.name = "张三" ;
+   per1.age = 18 ;
+   Person per2 = per1 ;
+   per2.age = 19 ;

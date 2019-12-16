@@ -1,0 +1,23 @@
+
+     1. static 属性可以由 类名称 直接调用 ，
+        static属性虽然定义在类之中，但是不受到类实例化对象的控制，
+        即：static属性可以在没有实例化对象的时候使用
+
+        Person.country = "FairyLand" ;
+
+     2.static方法 与 非static方法
+
+        |—— static方法：只允许调用static属性和static方法
+
+        |—— 非static方法：允许调用static属性和static方法
+
+
+      所有static属性和static方法都可以在没有实例化对象的情况下使用，
+      非static属性和方法必须要实例化才能使用，
+
+     public static void setName(String c)
+     {
+         country = c ;
+         //如果写成 this.country = c ；  this表示当前对象，static没有实例化对象，所有就出错
+         static方法中不能加this，super
+     }

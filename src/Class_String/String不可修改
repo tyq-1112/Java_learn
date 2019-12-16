@@ -1,0 +1,24 @@
+
+
+      String str = "www.";
+      str += "baidu" ;
+      str += ".com" ;
+
+字符串包含的是一个数组，数组的缺点就是长度不可以改变，所以字符串是不可以被修改的
+
+此上程序，并没有修改其内容，其改变的是str的引用，会产生很多垃圾空间，
+
+                          堆内存
+                          www.
+       str                baidu
+                          www.baidu
+                          .com
+                          www.baidu.com
+
+
+使用String，不要频繁修改：
+
+     string str = "1"+"2"+"3" ;
+     这种写法不是频繁修改，因为123是一个静态值，会变成一个整体存取，不会产生垃圾
+
+频繁修改使用：StringBuilder

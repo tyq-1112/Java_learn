@@ -1,0 +1,29 @@
+
+    JDK1.8以后String保存的是字符数组：private final char value[];
+
+    JDK1.9以后String保存的是字节数组：private final byte value[];
+
+    所谓的字符串就是对数组的一种特殊包装，其内容是无法改变的——final
+
+
+    一、String  str = "mldn" ;
+       所谓的String类对象的直接赋值，描述的是：将一个匿名对象设置一个具体的引用名字
+       这样赋值会直接写进常量池
+
+        "mldn".equals(str)   //true
+        说明，程序中的确没有String常量，有的只是String类的匿名对象
+
+    二、String str = new String("mldn");
+        这样会开辟两块堆内存空间，而后只会只用一块，而另一块由字符串所定义的匿名对象将成为垃圾空间。
+
+
+    手工入池：public String intern() ;
+        new String("mdln").intern == "mdln" ；       //true
+
+
+        面试题：解释String类两种对象实例化方式的区别
+              直接赋值：只会产生一个实例化对象，并且可以自动的保存到对象池之中，以实现该字符串实例的重用
+              构造方法：会产生两个实例化对象，并且不会人池，无法实现对象重用，但是可以用intern()方法入池
+
+
+
