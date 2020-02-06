@@ -29,7 +29,7 @@ public class EDemo {
              ) {
             System.out.println(c.toString());
         }
-        IColor color = Color.RED ;
+        IColor color = Color.BLUE ;
         System.out.println(color.toString());
     }
 }

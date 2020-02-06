@@ -1,0 +1,22 @@
+
+     异常是导致程序中断执行的一种指令流，
+
+     try{
+          //可能出现异常的语句
+     }catch(异常类型  异常对象){
+        // 异常处理
+     }....（多个catch）
+      finally{
+        //不管异常是否处理都要执行
+      }
+
+   在此格式之中可以使用的组合：try...catch   、 try ... catch...finally   、 try...finally
+
+    printStackTrace()方法：可以得到完整的异常信息
+
+     try捕获异常实例化对象——>catch匹配——>异常处理
+
+      程序中可以处理的异常最大类型是Throwable：
+        --Error：还未执行出现的错误，开发者无法处理
+        --Exception：程序中出现的异常，开发者可以处理
+

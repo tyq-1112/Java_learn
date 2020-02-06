@@ -1,0 +1,9 @@
+
+    throws：在方法定义上使用，用来修饰方法，表示此方法可能产生异常明确告诉给调用处
+            （一般是非RuntimeException）
+
+    throw：使用在代码块，在程序中手动抛出一个异常，自己定义的
+
+    RuntimeException：此类的子类可以不强制性处理
+
+    RuntimeException是Exception的子类，
