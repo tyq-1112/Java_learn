@@ -7,7 +7,7 @@ interface IMessage{                            //定义一个接口
 interface IChannel{
      boolean connect() ;
 }
-class MessageImp implements IMessage,IChannel{                       //实现接口
+class MessageImp  implements IMessage,IChannel{                       //实现接口
     public String getInfo(){
         return "得到一个好消息，除夕快乐...." ;
     }

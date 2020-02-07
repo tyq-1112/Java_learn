@@ -11,7 +11,7 @@ class Milk implements IFood {
     }
 }
 
-class Bread implements IFood {
+class Bread  implements IFood {
     @Override
     public void eat() {
         System.out.println("eat bread");
