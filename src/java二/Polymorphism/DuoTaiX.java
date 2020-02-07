@@ -15,7 +15,7 @@ public class DuoTaiX {
         System.out.println("************舒适的地球生活中************");
         Dperson msg = new Dsuperman();                                     //向上转型
         msg.function();
-        System.out.println("*************外星人攻打地球时***********");
+        System.out. println("*************外星人攻打地球时***********");
         if(msg instanceof Dsuperman){                                    //判断后转型
             Dsuperman superman = (Dsuperman) msg ;                             //需要子类的功能时，向下转型
             System.out.println(superman.fire());

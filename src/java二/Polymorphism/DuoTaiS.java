@@ -7,7 +7,7 @@ class Animal{
 }
 class Ddog extends Animal{
     @Override
-    public void fun(){
+    public void  fun(){
         System.out.println("******我知道跑******");
     }
 }
