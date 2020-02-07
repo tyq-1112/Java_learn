@@ -5,7 +5,7 @@ public class Dome {
 
         String str1 = "123" ;
 
-        String str2 = "1" + "2" + "3" ;
+        String str2 = "1" + "2" + "3"  ;
 
         String str3 = "2" ;
 

@@ -1,7 +1,7 @@
 
     JDK1.8以后String保存的是字符数组：private final char value[];
 
-    JDK1.9以后String保存的是字节数组：private final byte value[];
+    JDK1.9以后String保存的是字节数组：private final byte value[] ;
 
     所谓的字符串就是对数组的一种特殊包装，其内容是无法改变的——final
 
