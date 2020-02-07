@@ -1,0 +1,20 @@
+    Set：不可以保存重复的数据
+
+    Set集合不像List扩充了许多的新方法，所有无法使用List集合中的get（）方法
+      无法实现指定索引数据的获取
+
+    Set接口之中有两个常用的子类：HashSet、TreeSet
+
+    HashSet：最大的特点就是保存的数据是无序的,   利用Object类提供的方法实现重复元素的判断
+                                               对象编码：public int hashCode() ;
+                                               对象比较：public boolean equals(Object obj);
+             首先利用hashCode（）进行编码匹配，如果编码不存在表示数据没有重复
+             如果存在，则进一步进行对象比较处理，如果发现重重，此数据不保存
+
+    TreeSet：保存的数据是有序的....（自动按照数据的升序进行排序 ）利用Comparable接口来实现重复元素的判断
+
+    经过分析之后TreeSet子类之中保存的数据允许排序，如果自定义类排序，需要实现Comparable接口，
+    实现此接口，才能够确认对象的大小关系
+    TreeSet本质是利用TreeMap子类实现的集合数据的存取，而TreeMap就需要根据Comparable来确定大小关系
+    覆写comparaTo方法时，需要比较自定义类中的所有属性——实际开发中首选HashSet
+
