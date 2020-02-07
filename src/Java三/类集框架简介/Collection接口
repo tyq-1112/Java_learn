@@ -1,0 +1,13 @@
+  java.util.Collection是单值集合操作最大的父接口，该接口之中定义有所有的单值数据的处理操作
+
+      ***1.public boolean add（E e）             向集合保存数据（单个）         （增加）
+
+         2.public boolean addAll(Collection <? extends E> e)   追加一组数据
+
+         3.public Object[] toArray()                将集合变为对象数组返回
+
+      ***4.public Iterator <E> iterator()           将集合变为Iterator接口       （输出）
+
+
+      JDK1.5之前用Collection，之后都用子接口List（允许重复）和Set（不允许重复）
+

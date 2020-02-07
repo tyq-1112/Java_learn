@@ -1,0 +1,3 @@
+    从JDK1.2开始引入了类集开发框架，——动态数组
+
+    在类集框架里面提供有：Collection、List、Set、Map、Iterator、Enumeration、Queue、ListIterator
