@@ -3,7 +3,7 @@ package java二.Object;
 class Operson{
     private String name ;
     private  int age ;
-    public Operson(String name , int age )
+    public Operson (String name , int age )
     {
         this.name = name ;
         this.age = age ;

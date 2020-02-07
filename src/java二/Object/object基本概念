@@ -1,5 +1,5 @@
 
    Object类主要解决参数问题
-    不存在继承关系，所有类都是Object类的子类
+    不存在继承关系， 所有类都是Object类的子类
        class Person {}    等价于   class Person extends Object {}
 
