@@ -2,7 +2,7 @@
 
      public class 与 class：
        public class：类名称与文件名称保持一致，一个*.java文件里面只允许一个public class
-                     如果一个类需要被其他包使用，一定要设为public class
+                      如果一个类需要被其他包使用，一定要设为public class
 
        class：类名称可以与文件名称不一致，并且一个*.java文件里可以提供多个class定义，编译后形成不同的*.class文件
               这些类只能够被本包所访问，外包无法访问
