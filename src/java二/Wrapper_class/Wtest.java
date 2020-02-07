@@ -12,7 +12,7 @@ class Int{
 }
 public class Wtest {
     public static void main(String[] args) {
-        Object obj = new Int(10);          //装箱：将基本数据类型保存在包装类之中
+         Object obj = new Int(10);          //装箱：将基本数据类型保存在包装类之中
         int temp = ((Int)obj).intValue();        //拆箱：从包装类对象中获取基本数据类型
         System.out.println(temp * 2);
 

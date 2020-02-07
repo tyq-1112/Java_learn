@@ -11,7 +11,7 @@ Object
         包装类相等判断的时候一定要使用equals（）方法完成,包装类需要考虑占位的长度，
         如果超过一位的内容，就需要使用equals比较
 
-        Integer x = 128；
+         Integer x = 128；
         Integer y = 128；
         Integer z = new Integer(128) ;
         sout(x == y);            //false
