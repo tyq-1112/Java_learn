@@ -8,7 +8,7 @@ class Channel1{
         this.connect();
     }
 }
-class DataChannel extends Channel1{
+class DataChannel  extends Channel1{
 
     //此时并不是一个覆写，因为父类的connect方法不可见，那么这个方法对于子类而言就相当于新定义的方法
 

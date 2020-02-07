@@ -9,7 +9,7 @@ class DatabaseChannel extends Channel{
     @Override
     public void fun(){
         super.fun();              //子类调用父类方法
-        System.out.println("【子类】进行资源连接");
+        System.out. println("【子类】进行资源连接");
     }
 }
 public class Demo {

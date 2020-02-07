@@ -2,4 +2,4 @@
     final关键字：
     定义不能被继承的类、定义不能被覆写的方法、常量
 
-    常量：public static final int ON = 1 ；   //全局常量，每个字母大写较好
+    常量：public static   final int ON = 1 ；   //全局常量，每个字母大写较好
