@@ -3,7 +3,7 @@ package java二.ENUM;
 interface IColor{
     public String Isend();
 }
-enum Color implements IColor{               //枚举类
+enum Color implements IColor {               //枚举类
     RED("红色"), GREEN("绿色"), BLUE("蓝色");       //实例化对象，要写在首行
     private String title ;
     private Color(String title){
