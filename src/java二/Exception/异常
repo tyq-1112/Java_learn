@@ -12,7 +12,7 @@
 
    在此格式之中可以使用的组合：try...catch   、 try ... catch...finally   、 try...finally
 
-    printStackTrace()方法：可以得到完整的异常信息
+    printStackTrace()方法：可以得到完整的异常信 息
 
      try捕获异常实例化对象——>catch匹配——>异常处理
 

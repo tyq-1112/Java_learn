@@ -10,7 +10,7 @@ class Math{
     }
 }
 public class EDemo {
-    public static void main(String[] args)throws Exception {
+    public static void main (String[] args)throws Exception {
         try{
             System.out.println(Math.div(10,0));
         }catch (Exception e){

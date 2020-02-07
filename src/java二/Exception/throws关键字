@@ -6,4 +6,4 @@
 
     RuntimeException：此类的子类可以不强制性处理
 
-    RuntimeException是Exception的子类，
+    RuntimeException是Exception的子类 ，
