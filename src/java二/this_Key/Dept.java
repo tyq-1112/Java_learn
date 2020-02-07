@@ -46,7 +46,7 @@ class Student
 
 public class Dept {
     public static void main(String[] args) {
-        Student student = new Student("小仙女",20,"180707");
+         Student student = new Student("小仙女",20,"180707");
         System.out.println(student.getInfo());
     }
 }
