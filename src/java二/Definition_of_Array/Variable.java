@@ -2,7 +2,7 @@ package java二.Definition_of_Array;
 
 class Demo
 {
-    public static int sum(int ... data) {
+    public static int sum(int ...  data) {
         int sum = 0;
         for (int i : data)
             sum = sum + i;
