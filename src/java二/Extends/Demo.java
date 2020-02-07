@@ -18,7 +18,7 @@ class Student extends People{             //子类
     }
 }
 
-public class Demo {
+public class Demo  {
     public static void main(String[] args) {
         new Student("小仙女",20,"清华大学");
         //实例化子类对象的同时一定会实例化父类对象
