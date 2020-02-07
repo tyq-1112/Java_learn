@@ -1,0 +1,17 @@
+     public class LinkedList<E>
+         extends AbstractSequentialList<E>
+         implements List<E>, Deque<E>, Cloneable, java.io.Serializable
+
+      public abstract class AbstractSequentialList<E> extends AbstractList<E>
+
+      public abstract class AbstractList<E> extends AbstractCollection<E> implements List<E>
+
+     1.LinkedList构造方法里面没有提供初始化大小的方法，而只是提供无参构造方法
+
+     2.在LinkedList中所有的数据都可以保存，也可以保存 “null”
+
+     3.
+     ArrayList与LinkedList：
+       ArrayList是数组实现的集合操作，而LinkedList是链表实现的集合操作
+       在使用List集合中的get（）方法根据索引获取数据，ArrayList的时间复杂的为 O(1)
+       ArrayList在使用的默认的初始化对象数组的长度为10，

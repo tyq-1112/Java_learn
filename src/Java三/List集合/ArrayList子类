@@ -1,0 +1,31 @@
+
+    public class ArrayList<E> extends AbstractList<E>
+       implements List<E>, RandomAccess, Cloneable, java.io.Serializable
+
+   public abstract class AbstractList<E> extends AbstractCollection<E> implements List<E>
+
+   public abstract class AbstractCollection<E> implements Collection<E>
+
+   List存储的特征：
+     1.保存的顺序就是其存储的顺序
+     2.List集合里面允许存有重复数据
+
+   在JDK1.8之后Iterator父接口之中定义有一个forEach（）方法，
+     输出支持：default void forEach (Consumer <? super T> action ) ;   (不是标准输出)
+
+        在ArrayList里面所包含的数据实际上就是一个对象数组（不是链表），如果进行数据追加的时候，
+    如果集合长度不够的时候，会进行新的空间开辟，同时将旧的数据copy到新数组之中
+
+        如果实例化ArrayList类对象的时候没有传递初始化长度，则默认会使用一个空数组，但是在进行数据增加的时候, 发现数组容量不够
+    则会判断当前的容量与默认的容量的大小，使用较大的数值进行新的数组开辟，
+
+        所以JDK1.9之后，ArrayList默认的构造只会使用空数组，使用的时候开辟数组，默认的开辟长度为10
+                  之前：ArrayList默认的构造实际上就会默认开辟大小为10的数组
+
+        当保存的容量不足的时候，会采用成倍的方式进行增长，原始长度10，下次就是20  40  80
+
+        ****在使用ArrayList子类的时候，如果数据超过10个，那么使用有参构造，以避免垃圾数组的空间产生
+
+保存自定义类对象：
+  在使用list保存自定义类对象的时候如果要使用contains()、remove()方法进行查询与删除
+    需要覆写equals()方法

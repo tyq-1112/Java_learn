@@ -1,0 +1,6 @@
+
+     List 是 Collection子接口，可以保存重复的元素数据
+
+     List属于一个接口，对于接口想要使用则一定要使用子类完成，List的子类：ArrayList、Vector、LinkedList
+
+     ArrayList：

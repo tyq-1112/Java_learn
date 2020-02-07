@@ -1,0 +1,6 @@
+  JDK1.0
+
+  Vector类如果使用的是无参构造，则一定会开辟一个10个长度的数组，其余操作与ArrayList相同
+
+  Vector类之中的操作方法都是采用的是synchronized同步处理，ArrayList没有进行同步处理，
+  Vector在多线程访问的时候属于线程安全的，但是性能不高
