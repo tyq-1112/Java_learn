@@ -21,7 +21,7 @@ class Gpoint<T> {
 }
 
 public class GDemo {
-    public static void main(String[] args) {
+    public static void main (String[] args) {
         Gpoint<Integer> gpointA = new Gpoint<>(5, 10);
         Gpoint<String> gpointB = new Gpoint<>("5","10");
 

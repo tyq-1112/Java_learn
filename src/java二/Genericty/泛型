@@ -6,7 +6,7 @@
          如：？extends Number  ——表示该泛型只允许设置Number或Number的子类
 
       ？super 类  ：设置泛型下限
-         如： ？ super String ——只能够使用String或其父类
+         如： ？ super String —— 只能够使用String或其父类
 
      泛型方法：
        如果一个没有定义泛型，也可以使用泛型方法
