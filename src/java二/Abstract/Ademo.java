@@ -7,7 +7,7 @@ abstract class AMessage{               //抽象类
         this.name = name ;
         this.age = age ;
     }
-    public abstract String getConnectInfo();      //抽象方法
+    public abstract String getConnectInfo();       //抽象方法
 }
 
 class AateMessage extends AMessage{
