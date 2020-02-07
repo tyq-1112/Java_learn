@@ -52,7 +52,7 @@ public class One_to_many {
     public static void main(String[] args) {
         item item = new item(001,"编程书籍");
         subitem subitems[] = new subitem[]{
-                new subitem(002,"java从入门到放弃"),
+                 new subitem(002,"java从入门到放弃"),
                 new subitem(003,"c++从入门到放弃")
         };
         item.setSubitems(subitems);             //一个分类有多个子分类

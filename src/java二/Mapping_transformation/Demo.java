@@ -69,7 +69,7 @@ class Emp
     }
 
 }
-public class Demo {
+public class   Demo {
     public static void main(String[] args) {
         Dept dept = new Dept(10,"财务部","长沙");
         Emp empA = new Emp(001,"A","java工程师",800.00,0.0);

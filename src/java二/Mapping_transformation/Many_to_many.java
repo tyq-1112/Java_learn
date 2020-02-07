@@ -48,7 +48,7 @@ class Product
 }
 public class Many_to_many {
     public static void main(String[] args) {
-        //设置关系
+        //设置 关系
         Meber meberA = new Meber("小兔子",35);
         Meber meberB = new Meber("小白喵",20);
         Product proA = new Product("c++从入门到放弃",50.00);
