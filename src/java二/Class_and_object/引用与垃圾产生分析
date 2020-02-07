@@ -1,5 +1,5 @@
 
-    Person per1 = new Person();
+    Person per1 = new Person() ;
     per1.name = "张三" ;
     per1.age = 18 ;
     Person per2 = new Persom();
