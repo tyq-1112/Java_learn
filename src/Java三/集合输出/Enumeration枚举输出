@@ -1,0 +1,8 @@
+
+    JDK1.0，主要是为了Vector类提供服务
+    如果想要获取Enumeration接口对象，就必须Vector类提供的方法
+
+    1.获取Enumeration：  public Enumeration <E> elements() ;
+    2.判断是否有下一个元素：  public boolean hasMoreElements() ;
+    3.获取当前元素            public E nextElement() ;
+

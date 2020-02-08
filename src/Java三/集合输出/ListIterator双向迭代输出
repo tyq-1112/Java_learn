@@ -1,0 +1,9 @@
+
+ ListIterator：
+    如果想要获取ListIterator接口对象，Collection并没有定义相关的处理方法，但是List子接口有
+      说明这个输出专门为List集合准备的
+
+      1.判断是否有前一个元素 ： public boolean hasPrevious() ;
+      2.获取当前元素：          public E previous() ;
+
+      如果想要实现由后向前的遍历，那么先要实现由前向后

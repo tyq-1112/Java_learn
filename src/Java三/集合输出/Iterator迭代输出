@@ -1,0 +1,15 @@
+
+      对于集合而言有四种输出格式：Iterator迭代输出(由前向后输出)、ListIterator双向迭代输出
+                                 Enumeration枚举输出、foreach输出
+
+      获取Iterator接口对象：public Iterator<T>iterator() ;
+           1.public boolean hasNext() ;                               //判断是否有数据
+           2.public E next() ;                                        //取出当前数据
+           3.public default void remove() ;                           //删除
+
+      Collection.remove() 与 Iterator.remove():
+        在进行迭代输出的时候如果使用Collection中的remove，则造成并发更新的异常，导致程序删除出错
+           则必须使用Iterator中的remove方法实现正常删除处理
+
+      java.util.Scanner类就是Iterator的子类，
+
