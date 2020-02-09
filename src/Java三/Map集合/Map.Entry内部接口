@@ -1,0 +1,14 @@
+
+  HashMap类中的Node内部类本身实现了Map.Entry接口
+    static class Node<K,V> implements Map.Entry<K,V>
+  所以：所有的key和value的数据都被封装在Map.Entry接口之中，
+
+  主要作用：作为一个key和value的包装类型使用，
+
+
+
+自定义Map的key：
+   对于自定义Key类型所在的类中要覆写hasCode() 与equals() 方法
+
+面试题：如果在进行HashMap进行数据操作的时候出现看Hash冲突，HashMap如何解决
+        当出现HashMap冲突之后，为了保证程序的正常执行，会在冲突的位置上将所有的Hash冲突的内容转为链表保存

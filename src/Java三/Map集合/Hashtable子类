@@ -1,0 +1,15 @@
+
+  Hashtable类从JDK1.0的时候提供的，与Vector、enumeration属于最早的一批动态数组
+    后来让其保存下来，多实现了一个Map接口
+
+    public class Hashtable<K,V>
+        extends Dictionary<K,V>
+        implements Map<K,V>, Cloneable, java.io.Serializable
+
+    Hashtable:数据存储的时候设置key或value不允许为null，
+
+
+    Hashtable与HashMap：
+      HashMap：方法属于异步操作(非线程安全)，可以保存null数据
+
+      Hashtable：方法属于同步错做(线程安全)，不可以保存null数据

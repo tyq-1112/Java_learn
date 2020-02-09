@@ -1,0 +1,35 @@
+
+public class HashMap<K,V> extends AbstractMap<K,V>
+    implements Map<K,V>, Cloneable, Serializable
+
+  1.对于put操作是提供有返回值的，这个返回值是指在重复key的情况下返回旧的value，不重复返回null
+    sout(map.put("one",1))         //null
+    sout(map.put("one",11))        //1
+
+
+源代码分析：
+   public HashMap() {
+           this.loadFactor = DEFAULT_LOAD_FACTOR; // all other fields defaulted
+       }
+  static final float DEFAULT_LOAD_FACTOR = 0.75f;
+
+  public V put(K key , V value){
+    return putVal(hash(key),key,value,false,true);
+  }
+  //在使用put()方法进行数据保存的时候会调用一个putVal()方法，同时将key进行hash处理（生成一个hash码）；
+    对于putVal()方法里面会提供一个Node结点类进行数据的保存
+    在使用putVal()方法时会调用一个resize()方法，可以进行容量的扩充
+
+   面试题：一、在进行HashMap的put()操作时，如果进行容量扩充
+           1.在HashMap类里面会提供有一个“DEFAULT_INITIAL_CAPACITY”常量作为初始化的容量，默认大小：16个元素
+           2.当保存的内容容量超过了一个阈值（DEFAULT_LOAD_FACTOR = 0.75f），相当于“容量*阈值”16*0.75 = 12
+             保存12个元素的时候就会进行容量的扩充，
+           3.在进行扩充的时候HashMap采用的是成倍的扩充模式，
+
+           二、解释HashMap的工作原理
+           1.在HashMap之中进行数据存储依然利用Node类完成的，说明可以使用的数据结构只有两种：链表(O(n))和二叉树O(logn)
+           2.从JDK1.8开始，HashMap的实现出现改变，因为其适应大数据时代的海量数据问题，并且在HashMap类内部
+             提供一个常量：static final int TREEIFY_THRESHOLD = 8 ;如果保存的数据没有超过8个，采用的是链表
+             超过8个，则会将链表转为红黑树以实现树的平衡，并且利用左旋和右旋保证数据查询性能
+
+

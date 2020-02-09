@@ -1,0 +1,18 @@
+
+   Collection接口之中保存的数据全部都只是单个的，
+
+        二元偶对象的保存（key = value）的形式，核心：通过key获取value。
+   在开发中：Collection集合保存数据的目的是为了  输出
+             Map集合保存数据是为了  进行key的查找
+
+  Map接口是进行二元偶对象保存的最大父接口，public interface Map<K,V> ;
+     1.public V put(K key , V value)          //向集合之中保存数据
+     2.public V get(Object key)               //根据key查询数据
+     3.public Set<Map.Entry<K,V>>entrySet()   //将Map集合转为Set集合
+     4.public Set<K> keySet()                  //将Map集合中的key转为Set集合
+     5.public V remove(Object key)             //根据key删除指定的数据
+
+   在Map集合之中数据用 of() 方法 保存就是按照“key = value”的形式存储的，
+   并且里面的数据不允许重复，不能设置为null
+
+   Map集合常见的子类：HashMap、LinkedHashMap、Hashtable、TreeMap

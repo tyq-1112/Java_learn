@@ -1,0 +1,11 @@
+
+  在Map集合里没有一个可以直接返回Iterator对象，
+
+     在Map集合里保存的实际上是一组Map.Entry接口对象，（里面包装的是key和value），所有Map实现的依然是单值的保存
+        所有Map提供一个方法：public Set<Map.Entry<K,V>>entrySet()  ——将Map集合转为Set集合
+
+        1.利用Map接口中提供的entrySet()方法将Map集合转为Set集合
+        2.利用Set接口的iterator()方法将Set集合转为Iterator接口实例
+        3.利用Iterator进行迭代输出获取每一个组Map.Entry对象，随后通过getKey()与getValue()获取数据
+
+
