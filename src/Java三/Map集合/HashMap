@@ -20,7 +20,7 @@ public class HashMap<K,V> extends AbstractMap<K,V>
     对于putVal()方法里面会提供一个Node结点类进行数据的保存
     在使用putVal()方法时会调用一个resize()方法，可以进行容量的扩充
 
-   面试题：一、在进行HashMap的put()操作时，如果进行容量扩充
+   面试题：一、在进行HashMap的put()操作时，如何进行容量扩充
            1.在HashMap类里面会提供有一个“DEFAULT_INITIAL_CAPACITY”常量作为初始化的容量，默认大小：16个元素
            2.当保存的内容容量超过了一个阈值（DEFAULT_LOAD_FACTOR = 0.75f），相当于“容量*阈值”16*0.75 = 12
              保存12个元素的时候就会进行容量的扩充，
