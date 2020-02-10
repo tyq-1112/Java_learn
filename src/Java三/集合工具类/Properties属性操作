@@ -1,0 +1,7 @@
+
+   *.properties 文件的存储结构是按照“key = value”的形式存储，其保存的内容只能是字符串
+
+    public class Properties extends Hashtable<Object,Object>
+
+    最重要的功能：根据输出流输出属性，输入流读取属性（Map没有）
+       通常用于读取配置资源信息

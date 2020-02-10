@@ -1,0 +1,13 @@
+
+public class LinkedList<E>
+    extends AbstractSequentialList<E>
+    implements List<E>, Deque<E>, Cloneable, java.io.Serializable
+
+    public interface Deque<E> extends Queue<E>
+
+  public interface Queue<E> extends Collection<E>
+
+  1.追加数据：public boolean offer(E e),可以直接使用add
+  2.获取数据：public E poll() , 弹出后删除数据
+
+  除了LinkedList子类之外，还有一个优先级队列的概念：PriorityQueue（比较功能）
