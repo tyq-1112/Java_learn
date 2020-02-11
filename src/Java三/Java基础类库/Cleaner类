@@ -1,0 +1,8 @@
+
+  Cleaner是在JDK1.9之后提供的一个对象清理操作，主要功能：进行finalize()方法的代替
+   C++中：构造函数、析构函数(对象手工回收)，因为java中垃圾空间由GC自动回收，所以没有析构函数
+
+   最先提供对象收尾的操作是：Object中的finalize()方法
+   1.9之后建议使用：AutoCloseable 和 java.lang.ref.Cleaner类进行回收处理
+
+   更多情况下考虑的是多线程的使用

@@ -1,0 +1,18 @@
+  Runtime描述的是运行时的状态，唯一一个与JVM运行有关的，并且默认提供有一个该类的实例化对象
+
+  由于在JVM进程里面只允许提供有一个Runtime类的对象，所以这个类的构造方法被私有化了，说明该类使用的单例设计模式
+  所以会提供一个static 方法获取本类实例
+     获取实例化对象：public static Runtime getRuntime()
+
+     1.获取本机CPU内核数：public int availableProcessors();
+
+     2.获取最大可用内存空间：public long maxMemory() ;  默认的配置为本机系统内存的1/4
+
+     3.获取可用内存空间：public long totalMemory() ;    默认为1/64
+
+     4.获取空闲内存空间：public long freeMemory() ;
+
+     5.手工进行GC处理：public void gc() ;
+
+     什么是gc：
+       GC（Garbage Collector）垃圾收集器，是可以由系统自动调用的垃圾释放功能，或者使用Runtime中的gc()方法手工调用

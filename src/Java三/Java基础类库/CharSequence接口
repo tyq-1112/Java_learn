@@ -1,0 +1,18 @@
+  CharSequence是描述一个字符串结构的接口，
+     常用的子类：String、StringBuffer、StringBuilder
+
+    public final class String
+    implements java.io.Serializable, Comparable<String>, CharSequence
+
+     public final class StringBuffer
+         extends AbstractStringBuilder
+         implements java.io.Serializable, CharSequence
+
+    public final class StringBuilder
+        extends AbstractStringBuilder
+        implements java.io.Serializable, CharSequence
+
+  1、只要是字符串就可以为CharSequence接口实例化
+     CharSequence str = "www.baidu.com" ;                 //子类实例向父接口转型
+
+  总结：——CharSequence描述的就是一个字符串

@@ -1,0 +1,6 @@
+
+  1.数组拷贝：public static void arraycopy(Object src,int srcPos , Object dest,int length)
+
+  2.获取当前日期时间数值：public static long currentTimeMillis() ;
+
+  3.进行垃圾回收：public static void gc()  等价于 Runtime.getRuntime().gc()
