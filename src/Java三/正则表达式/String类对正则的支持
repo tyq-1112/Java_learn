@@ -1,0 +1,8 @@
+
+   在进行正则表达式大部分处理的情况下都会基于String类完成的，
+
+   1.public boolean matches(String regex)        将指定字符串进行正则判断
+
+   2.public String[] split(String regex)          正则拆分
+
+   3.public String[] split(String regex，int limit)

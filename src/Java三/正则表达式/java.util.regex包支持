@@ -1,0 +1,14 @@
+
+   虽然大部分正则利用String类实现，但是也有一些需要用到java.util.regex开发包中提供的处理类
+      Pattern(正则表达式编译类)、Matcher(正则匹配类)
+
+    Pattern：
+      1.正则表达式编译处理：public static Pattern compile(String regex)
+
+      2.字符串拆分操作：public String[] split(CharSequence input)
+
+    Matcher：
+       此类的对象实例化依靠Pattern类完成
+       public Matcher matcher(CharSequence input) ;
+
+    Matcher类里面提供有一组分组的功能，是String不具备的
