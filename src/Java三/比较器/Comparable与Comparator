@@ -1,0 +1,6 @@
+
+    Comparable ：java.lang.Comparable 是类定义的时候实现的父接口，主要用于定义排序规则，
+                 里面只有CompareTo() 方法
+
+    Comparator： java.util.Comparator 是挽救的比较器操作，需要设置单独的比较器规则类实现排序，
+                 里面有compare() 方法
