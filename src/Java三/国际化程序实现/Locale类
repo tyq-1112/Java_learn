@@ -1,0 +1,14 @@
+
+   Locale类：
+
+      public Locale(String language)
+
+      public Locale(String language , String country)
+
+ 国家和语言代码：
+   中文：zh_CN
+   美国英文：en_US
+   获取国家和语言：浏览器
+
+   自动获得当前运行环境
+     读取本地默认环境：public static Local getDefault() ;

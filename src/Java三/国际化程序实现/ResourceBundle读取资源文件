@@ -1,0 +1,14 @@
+
+     ResourceBundle 是一个抽象类，
+        获取ResourceBundle 类对象：public static final ResourceBundle getBundle(String baseName) ；
+           baseName ：描述的是资源文件的名称，没有后缀
+
+        根据key读取资源内容：public final String getString (String key) ;
+
+
+        java中properties配置文件默认的编码为：ISO-8859-1，是不支持中文的，所以会乱码
+
+        1） 对字符串进行转码
+
+        ResourceBundle bundle = ResourceBundle.getBundle("配置文件名");
+        String valueCN = new String(bundle.getString("key").getBytes("ISO-8859-1"), "GBK");
