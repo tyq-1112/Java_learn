@@ -1,0 +1,12 @@
+
+  在java中提供有定时任务，只是实现了间隔触发的操作，
+    需要定时操作的主体类和一个定时任务的控制
+
+     使用：
+        java.util.TimerTask类：(abstract)实现定时任务处理
+        java.util.Timer类    ：进行任务的启动，
+          启动方法：
+            1.任务启动：public void schedule(TimerTask task , long delay) 延迟单位为毫秒
+            2.间隔触发：public void scheduleAtFixedRate(TimerTask task ,long delay ,long period)
+
+

@@ -1,0 +1,3 @@
+
+    Base64.Encoder：进行加密处理 public byte[] encode(byte[] src)
+    Base64.Decode ：进行解密处理 public byte[] decode(String src)
