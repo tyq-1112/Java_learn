@@ -1,0 +1,18 @@
+   Runnable实现，可以避免单继承的局限，也可以更好的进行可能的扩充
+
+ @FunctionalInterface      //JDK1.8开始，可以使用函数式接口定义
+ public interface Runnable{
+    public void run() ;
+ }
+
+     实现Runnable接口，不在继承Thread类，就无法调用Thread类的star()方法，
+       此时通过观察Thread类的构造方法
+          构造方法：public Thread(Runnable target) ;
+
+            Thread threadA = new Thread(new MyRunnable("线程对象A")) ;
+            Thread threadB = new Thread(new MyRunnable("线程对象B")) ;
+
+            threadA.start();
+            threadB.start();
+
+   优先考虑Runnable接口实现，并且永恒都通过Thread类启动

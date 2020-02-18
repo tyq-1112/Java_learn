@@ -1,0 +1,13 @@
+
+   Runnable接口有一个缺点，当线程执行完毕之后，无法获取一个返回值
+    所以JDK1.5之后提出了一个新的线程接口，java.util.concurrent.Callable
+
+   @FunctionalInterface
+   public interface Callable<V>{
+      public V call() throws Exception ;
+   }
+      此泛型的类型就是返回数据的类型，这样的好处避免向下转型的安全隐患
+
+ public class FutureTask<V> implements RunnableFuture<V>
+
+ public interface RunnableFuture<V> extends Runnable, Future<V>

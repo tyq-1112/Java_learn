@@ -1,0 +1,10 @@
+
+  public class Thread extends Object implements Runnable{}
+    Thread类也是Runnable的子类，所以覆写Thread类的run()方法实际上是覆写Runnable接口的run方法
+
+    在进行Thread启动多线程的时候调用的是star()方法，而后找到run()方法，
+     当通过Thread类的构造方法传递了一个Runnable的接口对象的时候，该接口对象将被Thread类的 target 属性保存
+     在star()方法执行的时候会调用Thread 类中的run() 方法，而这个run()方法去调用Runnable接口子类被覆写过的run()方法
+
+
+     Thread描述的是线程，Runnable描述的是资源
