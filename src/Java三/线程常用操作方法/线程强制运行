@@ -1,0 +1,8 @@
+
+   所谓的线程的强制运行：当满足于某些条件之后，某一个线程对象将可以一直独占资源，一直到该线程的程序执行结束
+
+     强制执行：public final void join() throws Interruption ;
+
+
+ 线程礼让：public static void yield()
+        礼让执行的时候每一次调用yield()方法都只会礼让一次

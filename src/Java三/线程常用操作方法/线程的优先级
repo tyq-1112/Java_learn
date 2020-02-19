@@ -1,0 +1,8 @@
+
+   优先级越高可能先执行(优先抢到资源)
+   可能优先执行，并不是一定
+
+   1.设置优先级：public final void setPriority (int newPriority)
+   2.获取优先级：public final int getPriority()
+
+   主线程和子线程属于中等优先级，

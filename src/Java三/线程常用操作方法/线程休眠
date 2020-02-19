@@ -1,0 +1,7 @@
+
+   如果希望一个线程可以暂缓，就可以使用休眠的处理
+     1.public static void sleep (long millis) throws InterruptedException ;
+     2.public static void sleep (long millis , int nanos) throws InterruptedException ;
+
+
+     如果有多个线程对象，那么休眠也是有先后顺序的，

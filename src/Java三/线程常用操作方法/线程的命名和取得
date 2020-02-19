@@ -1,0 +1,18 @@
+
+   1.public Thread(Runnable target , String name) ;
+
+   2.设置名字：public final void setName(String name)
+
+   3.取得名字：public final String getName()
+
+   对于线程对象是不可控的，所有不能只依靠this来完成，但是所有的线程都要执行run方法，
+      获取当前线程：public static Thread currentThread() ;
+
+   如果开发者为线程设置了名字的时候就使用设置的名字，else 自动生成一个不重复的名字，
+
+   ***使用mt.run() 直接在主方法之中调用线程类对象 中的run()方法，
+       所获得的线程对象的名字为 "main",所以主方法也是一个线程
+
+    主方法是一个主线程，主线程可以创建若干个子线程
+    主线程负责整体流程，子线程负责处理耗时操作
+

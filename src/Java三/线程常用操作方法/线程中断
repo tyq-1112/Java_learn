@@ -1,0 +1,4 @@
+
+    线程中断 ：是其他线程完成的
+      1.判断线程是否被中断：public boolean isInterrupted() ;
+      2.中断线程执行： public void interrupt() ;
