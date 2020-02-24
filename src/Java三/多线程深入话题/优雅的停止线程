@@ -1,0 +1,10 @@
+
+     已被禁用的方法：
+       1.停止多线程：public void stop() ;
+       2.销毁多线程：public void destroy() ;
+       3.挂起线程：public final void suspend() ;
+       4.回复挂起的线程执行：public final void resume() ;
+
+       主要原因：有可能导致线程死锁，JDK1.2后不建议使用
+
+

@@ -1,0 +1,4 @@
+
+   volatile 与 synchronized 的区别：
+     volatile主要在属性上使用，而synchronized 是在代码块与方法上使用的
+     volatile无法描述同步的处理，它只是一种直接内存的处理，避免了副本的操作

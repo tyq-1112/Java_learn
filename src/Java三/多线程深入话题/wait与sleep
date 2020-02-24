@@ -1,0 +1,9 @@
+1、sleep()的作用是让当前线程由“运行状态”进入到“休眠(阻塞)状态”，sleep()不会释放锁。
+
+2、sleep()属于Thread类中的方法，必须捕获异常，并且sheep()方法可以在任意线程中使用。
+
+3、wait()的作用是让当前线程由“运行状态”进入“等待(阻塞)状态”，会释放对象的同步锁。
+
+4、wait()、notify()和notifyAll()属于Object类中的方法，不需要捕获异常，并且只能在synchronized同步块中使用。
+
+5、wait()和sleep()都可以通过interrupt()中断这个线程方法，打断线程的暂停状态 ，从而使线程立刻抛出InterruptedException。
