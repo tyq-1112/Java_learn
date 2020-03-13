@@ -1,0 +1,28 @@
+
+是否滚动：ResultSet的方法分为两类，一类用来判断游标位置的，另一类是用来移动游标的。
+         如果结果集是不可滚动的，那么只能使用next()方法来移动游标，
+         而beforeFirst()、afterLast()、first()、last()、previous()、relative()方法都不能使用
+
+是否敏感(敏感：数据库改变，使结果集也会改变)
+
+是否可更新(可更新：修改结果集，使数据库也改变)
+
+
+
+   1.con.createStatement()  ——>  生成的结果集：不滚动、不敏感、不可更新
+
+   2.con.createStatement(int ,int )
+
+   第一个参数：
+
+   ResultSet.TYPE_Forward_ONLY ：不滚动结果集
+
+   ResultSet.TYPE_SCROLL_INSENSITIVE ：滚动结果集，但是结果集数据不会跟随数据库变化而变化
+
+   ResultSet.TYPE_SCROLL_SENSITIVE：滚动结果集，但是结果集数据不会跟随数据库变化而变化
+
+   第二个参数：
+
+    CONCUR_REND_ONLY：结果集只读，不嫩通过修改结果集而影响数据库
+
+    CONCUR_UPDATABLE：结果集可更新，对结果集更新影响数据库
