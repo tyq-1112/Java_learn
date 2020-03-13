@@ -1,4 +1,4 @@
-package JDBC入门;
+package JDBC.JDBC入门;
 
 import com.mysql.cj.xdevapi.Result;
 
@@ -17,13 +17,13 @@ public class Demo1 {
                 RD.getString("jdbc.username"),
                 RD.getString("jdbc.password"));
         Statement state = con.createStatement();
-        String sql = "INSERT INTO tb_stu values (null , '杜甫',20,'男','1998-2-4')" ;
+        String sql = "INSERT INTO tb_stu values (null , '杜甫',20,'男','1998-2-4')";
         int change = state.executeUpdate(sql);
 
 
-        ResultSet set = state.executeQuery("select * from emp") ;
+        ResultSet set = state.executeQuery("select * from emp");
         //解析ResultSet
-        while(set.next()){   //判断下一行是否存在
+        while (set.next()) {   //判断下一行是否存在
             String name = set.getString("ename");    //通过名称来获取该列的值
             String job = set.getString(4);            //通过编号来获取该列的值
             double sal = set.getDouble(5);

@@ -1,4 +1,4 @@
-package JDBC入门;
+package JDBC.JDBC入门;
 
 import java.sql.*;
 
@@ -28,7 +28,7 @@ public class Standard {
             int column = set.getMetaData().getColumnCount();    //得到列数
             //获取指定列的列名：String getColumnName(int index)
             while (set.next()) {
-                for(int i = 1 ; i<=column ;i++){
+                for (int i = 1; i <= column; i++) {
                     System.out.print(set.getString(i));
                     System.out.print("  ");
                 }

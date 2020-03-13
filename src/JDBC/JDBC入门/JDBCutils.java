@@ -1,4 +1,4 @@
-package JDBC入门;
+package JDBC.JDBC入门;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
