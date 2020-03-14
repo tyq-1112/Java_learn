@@ -13,7 +13,7 @@ public class JDBCutils {
     public static ResourceBundle rb = null;
 
     static {  //静态代码块 只执行一次
-        rb = ResourceBundle.getBundle("JDBC.JDBC入门.data");
+        rb = ResourceBundle.getBundle("数据库.JDBC入门.data");
         try {
             Class.forName(rb.getString("jdbc.Driver"));
         } catch (ClassNotFoundException e) {

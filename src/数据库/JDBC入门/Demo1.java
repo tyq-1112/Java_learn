@@ -6,7 +6,7 @@ import java.util.ResourceBundle;
 public class Demo1 {
 
     public static void main(String[] args) throws ClassNotFoundException, SQLException {
-        ResourceBundle RD = ResourceBundle.getBundle("JDBC.JDBC入门.data");
+        ResourceBundle RD = ResourceBundle.getBundle("数据库.JDBC入门.data");
         Class.forName(RD.getString("jdbc.Driver"));
         //com.mysql.jdbc.Driver driver = new com.mysql.jdbc.Driver();
         //DriverManager.registerDriver(driver);
