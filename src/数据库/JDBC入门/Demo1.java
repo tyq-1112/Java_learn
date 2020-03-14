@@ -1,6 +1,4 @@
-package JDBC.JDBC入门;
-
-import com.mysql.cj.xdevapi.Result;
+package 数据库.JDBC入门;
 
 import java.sql.*;
 import java.util.ResourceBundle;
@@ -19,7 +17,6 @@ public class Demo1 {
         Statement state = con.createStatement();
         String sql = "INSERT INTO tb_stu values (null , '杜甫',20,'男','1998-2-4')";
         int change = state.executeUpdate(sql);
-
 
         ResultSet set = state.executeQuery("select * from emp");
         //解析ResultSet

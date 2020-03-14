@@ -1,7 +1,6 @@
-package JDBC.JDBC入门;
+package 数据库.JDBC入门;
 
 import org.apache.commons.io.IOUtils;
-import org.apache.commons.io.output.ByteArrayOutputStream;
 
 import javax.sql.rowset.serial.SerialBlob;
 import java.io.*;
