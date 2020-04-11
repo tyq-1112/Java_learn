@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Person xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://20200404"
+        xsi:schemaLocation="http://20200404 1.xsd" id1="1">
+    <student id2="aaa">
+        <name>第一名</name>
+        <sex>男</sex>
+    </student>
+
+    <student>
+        <name>第二名</name>
+        <sex>女</sex>
+    </student>
+</Person>

@@ -1,0 +1,18 @@
+<!ELEMENT Person (Student*)>
+        <!ELEMENT Student (name,age,sex,birthday,school,department)>
+        <!ELEMENT name (#PCDATA)>
+        <!ATTLIST name ID1 CDATA #REQUIRED>
+
+        <!ELEMENT age (#PCDATA)>
+        <!ATTLIST age ID2 CDATA #IMPLIED>
+
+        <!ELEMENT sex (#PCDATA)>
+        <!ATTLIST sex ID3 (ふじん|だんせい) #REQUIRED>
+
+        <!ELEMENT birthday (#PCDATA)>
+
+        <!ELEMENT school (#PCDATA)>
+        <!ATTLIST school ID5 CDATA #IMPLIED>
+
+        <!ELEMENT department (#PCDATA)>
+
