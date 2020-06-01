@@ -245,8 +245,14 @@ public static boolean login(String ename ,String empno) throws SQLException {
 >
 > 若第二次执行时，不用校验和编译，直接执行
 
+**Statement用途：**
+当执行字符串拼接时，需要用Statement，
 
+如：
+keywords = desc ;
+String sql = "select ename from emp order by ename" + keywords;
 
+如果使用？，则不符合sql语句规范
 ### jdbcUtils1.0小工具
 
 ```java
@@ -410,3 +416,14 @@ jdbc.username=root
 jdbc.password=121314
 ```
 
+‘
+
+### 单机事务
+
+银行转账，中途异常
+
+con.setAutoCommit(false)；    //开启事务
+
+if异常  则 ------con.rollback() ;      //回滚事务
+
+con.commit() ;                                //提交事务

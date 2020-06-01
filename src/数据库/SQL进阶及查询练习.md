@@ -230,3 +230,223 @@ select e.ename , e.sal ,d.dname
  from emp.e , dept d
 
 where e.sal > all (select  sal from emp where deptno =30) and e.deptno = d.deptno ;
+
+
+
+### 引擎
+
+##### Myisam
+
+它管理的表具有一下特征：
+
+> 使用三个文件表示每个表：
+>
+> > 格式文件：——存储结构的定义（xxx.frm）
+> >
+> > 数据文件：——存储表行的内容（xxx.MYD）
+> >
+> > 索引文件：——存储表上索引（xxx.MYI）
+
+
+
+> 灵活的AUTO_INCREMENT字段处理
+>
+> 可被转换为压缩，只读表来节省空间
+>
+> 不支持事务
+
+
+
+##### InnoDB
+
+1、支持事务、行级锁、外键等，这种存储引擎数据的安全得到保障（缺省引擎）
+
+> 表的结构存储在xxx.frm文件中
+>
+> 数据存储在tablespace空间中（逻辑概念），无法被压缩，无法转换只读
+>
+> 在数据库崩溃之后提供自动恢复
+>
+> 支持级联更新和级联删除
+
+
+
+##### MEMORY（HEPA）
+
+缺点：不支持事务，数据容易丢失，因为数据和索引存储在内存当中
+
+优点：查询速度最快
+
+### 事务
+
+事务包括四大特性：ACID
+
+> A：原子性：事务是最小的工作单元，不可再分
+>
+> C：一致性：事务必须保证多条DML语句同时成功同时失败
+>
+> I：隔离性：事务A与事务B之间具有隔离
+>
+> D：持久性：最终数据必须持久化到硬盘文件中，事务才算成功的结束
+
+
+
+事务隔离性存在隔离级别：
+
+> 第一级别：读未提交（read uncommitted），
+
+对方事务还没有提交，我们当前事务可以读取到对方未提交的数据，
+
+存在脏读现象，表示读到了脏的数据
+
+
+
+> 第二级别：读已提交（read committed）
+
+对方事务提交之后的数据我方可以读取到，解决了脏读现象
+
+读已提交存在的问题：不可重复读
+
+
+
+> 第三级别：可重复读（repeatable read）
+
+解决了：不可重读读的问题
+
+存在的问题是：读取的数据是幻象的
+
+
+
+> 第四级别：系列化读
+
+解决了所有问题，效率低，事务需要排队
+
+
+
+Oracle数据库默认的隔离级别是：读已提交
+
+MySQL数据库默认的隔离级别是：可重复读
+
+
+
+##### 演示事务
+
+MySQL中的事务是支持自动提交的，只要执行一条DML，则提交一次，
+
+关闭自动提交：start transaction；
+
+
+
+mysql> insert into t_user values (null,null);
+Query OK, 1 row affected (0.03 sec)
+
+mysql> select * from t_user;
++----+----------+
+| id | username |
++----+----------+
+|  1 | NULL     |
++----+----------+
+1 row in set (0.00 sec)
+
+mysql> rollback;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> select * from t_user;
++----+----------+
+| id | username |
++----+----------+
+|  1 | NULL     |
++----+----------+
+1 row in set (0.00 sec)
+
+
+
+关闭自动提交：start transaction；
+
+mysql> start transaction;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> insert into t_user values(null,'lisi'),(null,'wangwu');
+Query OK, 2 rows affected (0.01 sec)
+Records: 2  Duplicates: 0  Warnings: 0
+
+mysql> select * from t_user;
++----+----------+
+| id | username |
++----+----------+
+|  1 | NULL     |
+|  4 | lisi     |
+|  5 | wangwu   |
++----+----------+
+3 rows in set (0.00 sec)
+
+mysql> rollback;
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> select * from t_user;
++----+----------+
+| id | username |
++----+----------+
+|  1 | NULL     |
++----+----------+
+1 row in set (0.00 sec)
+
+
+
+rollback：只能回滚到上一次的提交点，
+
+savepoint 命名 ；
+
+rollback 名字；
+
+commit  提交 ；
+
+
+
+### 索引
+
+查询一张表的时候两种检索方式：
+
+> 全表扫描
+>
+> 根据索引检索（效率很高）
+
+
+
+1.什么时候考虑给字段添加索引
+
+> 数据量庞大
+>
+> 该字段很少的DML操作（因为字段进行修改操作，索引也需要维护）
+>
+> 该字段经常出现在where子句中
+
+
+
+注：主键和具有unique约束的字段自动会添加索引
+
+根据主键查询效率很高，
+
+
+
+新建索引：create index 索引名称 on 表名（字段名）
+
+删除索引：drop  index 索引名称 on 表名（字段名）
+
+
+
+索引底层采用的数据结构是：B+Tree
+
+
+
+索引会自动排序
+
+![image-20200526123928283](C:\Users\86158\AppData\Roaming\Typora\typora-user-images\image-20200526123928283.png)
+
+
+
+索引什么时候失效？
+
+如：模糊查询第一个通配符使用百分号
+
+ename like '%A%';
