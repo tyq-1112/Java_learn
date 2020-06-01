@@ -1,0 +1,42 @@
+<html>
+<body>
+<a href="https://www.sina.com.cn/">����</a>  <!-- ������Ĭ����get��ʽ����-->
+
+<form action="http://www.baidu.com" method="get">
+    <!--methodָ�����������ĳ�ַ�ʽ�������� Ĭ����get -->
+    <input title="�ٶ�" type="submit"/>
+</form>
+
+<!--�����Я����������-->
+<a href="http://www.baidu.com?username=xiaoxiang&value=123">�ٶ�</a>
+
+<form action="https://www.sina.com.cn" method="get">
+    <input name="username" type="text" value="mlike"/>
+    <input type="submit"/>
+    <!--���û�����ύ�����������q������Ϣhttps://www.sina.com.cn?username=mlike-->
+</form>
+
+<center>
+    <form action="http://www.baidu.com">
+        �û�������<input name="username" type="text"/> <!--�ı���--><br/>
+        �û����룺<input name="password" type="password"/><!--�����--><br/>
+        �û��Ա�<input name="sex" type="radio" value="man"/>��
+        <input checked name="sex" type="radio" value="woman"/>Ů <!--��ѡ��nameֵһ����Ϊһ��--><br/>
+        �ó����ܣ�<input name="jishu" type="checkbox" value="java"/>java
+        <input name="jishu" type="checkbox" value="c++"/>c++
+        <input name="jishu" type="checkbox" value="python"/>python <!--��ѡ��--><br/>
+        �û�ͷ��<input name="myfile" type="file"/><!--�ļ�ѡ��򣬽��ļ�������Ϊ�����������--><br/>
+
+        ���᣺<select name="home">
+        <option value="bj">����</option>
+        <option value="sh">�Ϻ�</option>
+        <option value="gd">�㶫</option>
+        <option selected value="hn">����</option>
+    </select> <br/>
+        ���ҽ��ܣ�<textarea cols=30 name="intro" rows=10></textarea><br/>
+        <input type="submit"/><!--�ύ-->
+        <input type="reset"/><!--����-->
+    </form>
+</center>
+</body>
+</html>
