@@ -1,0 +1,37 @@
+        Package pack = cls.getPackage();   //获取指定类的包定义
+        System.out.println(pack.getName());
+
+        Class<?> parent = cls.getSuperclass();   //获取继承父类
+        System.out.println(parent.getName());
+
+        Class<?> inters[] = cls.getInterfaces();    //获取父接口
+        for (Class temp:inters
+             ) {
+            System.out.println(temp.getName());
+        }
+
+        //获取构造方法
+        Constructor<?>[] constructors = cls.getSuperclass().getDeclaredConstructors();
+        //得到父类所有的构造方法
+        for (Constructor<?> temp: constructors
+             ) {
+            System.out.println(temp);
+        }
+
+        //得到指定构造方法
+        Constructor<?> constructor = cls.getConstructor(String.class,int.class);
+        System.out.println(constructor);
+
+        //获取全部方法  getDeclaredMethods:本类
+        Method method[] = cls.getMethods();   //包括父类
+        for (Method mes: method
+             ) {
+            System.out.println(mes);
+        }
+
+        //获取父类公共成员
+        Field fields[] = cls.getFields();
+        for (Field temp: fields
+             ) {
+              System.out.println(temp);
+              }

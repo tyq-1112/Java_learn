@@ -1,0 +1,3 @@
+使用unsafe类绕过实例化对象的管理，
+利用unsafe类绕过了JVM的管理机制，可以在没实例化对象的情况下获取一个Singleton类实例化对象
+Singleton instance = （Singleton）unsafe.allocateInstance(Singleton.class);
