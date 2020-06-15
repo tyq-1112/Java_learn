@@ -44,11 +44,28 @@ class PeopleComparator implements Comparator<People>{            //挽救
 public class Comparator1 {
     public static void main(String[] args) {
         People people[] = new People[]{
-                new People("长沙-A",19),
-                new People("长沙-B",29),
-                new People("长沙-C",19)
+                new People("长沙-A", 19),
+                new People("长沙-B", 29),
+                new People("长沙-C", 19)
         };
-        Arrays.sort(people,new PeopleComparator()) ;          //进行对象数组排序
+        Arrays.sort(people, new PeopleComparator());          //进行对象数组排序
         System.out.println(Arrays.toString(people));
     }
 }
+
+/*中文姓名排序
+* @Override
+        public int compare(Student p1, Student p2) {
+            String one = p1.getSname();
+            String two = p2.getSname();
+            Collator ca = Collator.getInstance(Locale.CHINA);
+            int flags = 0;
+            if (ca.compare(one, two) < 0) {
+                flags = -1;
+            } else if (ca.compare(one, two) > 0) {
+                flags = 1;
+            } else {
+                flags = 0;
+            }
+            return flags;
+        }*/
