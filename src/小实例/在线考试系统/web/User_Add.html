@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册界面</title>
+</head>
+<body>
+
+<center>
+    <form action="user/add" method="get">
+        <table border="2">
+            <tr>
+                <td>用户姓名</td>
+                <td><input name="userName" type="text"></td>
+            </tr>
+            <tr>
+                <td>用户密码</td>
+                <td><input name="password" type="password"></td>
+            </tr>
+            <tr>
+                <td>用户性别</td>
+                <td>
+                    <input checked name="sex" type="radio" value="男">男
+                    <input name="sex" type="radio" value="女">女
+                </td>
+            </tr>
+            <tr>
+                <td>用户邮箱</td>
+                <td><input name="email" type="text"></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="注册"></td>
+                <td><input type="reset"></td>
+            </tr>
+        </table>
+    </form>
+</center>
+</body>
+<html>

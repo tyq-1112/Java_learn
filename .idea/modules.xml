@@ -2,7 +2,15 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/src/JavaWeb/SERVLET/01_Servlet接口实现类/01_Servlet接口实现类.iml" filepath="$PROJECT_DIR$/src/JavaWeb/SERVLET/01_Servlet接口实现类/01_Servlet接口实现类.iml" />
+      <module fileurl="file://$PROJECT_DIR$/src/JavaWeb/SERVLET/02_Servlet对象生命周期/02_Servlet对象生命周期.iml" filepath="$PROJECT_DIR$/src/JavaWeb/SERVLET/02_Servlet对象生命周期/02_Servlet对象生命周期.iml" />
+      <module fileurl="file://$PROJECT_DIR$/src/JavaWeb/SERVLET/03_HttpServletResponse介绍/03_HttpServletResponse介绍.iml" filepath="$PROJECT_DIR$/src/JavaWeb/SERVLET/03_HttpServletResponse介绍/03_HttpServletResponse介绍.iml" />
+      <module fileurl="file://$PROJECT_DIR$/src/JavaWeb/SERVLET/04_HttpServletRequest介绍/04_HttpServletRequest介绍.iml" filepath="$PROJECT_DIR$/src/JavaWeb/SERVLET/04_HttpServletRequest介绍/04_HttpServletRequest介绍.iml" />
+      <module fileurl="file://$PROJECT_DIR$/src/JavaWeb/SERVLET/05_请求转发解决方案/05_请求转发解决方案.iml" filepath="$PROJECT_DIR$/src/JavaWeb/SERVLET/05_请求转发解决方案/05_请求转发解决方案.iml" />
+      <module fileurl="file://$PROJECT_DIR$/src/JavaWeb/SERVLET/06_ServletContext/06_ServletContext.iml" filepath="$PROJECT_DIR$/src/JavaWeb/SERVLET/06_ServletContext/06_ServletContext.iml" />
       <module fileurl="file://$PROJECT_DIR$/Java笔记.iml" filepath="$PROJECT_DIR$/Java笔记.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../test/test.iml" filepath="$PROJECT_DIR$/../test/test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/src/小实例/在线考试系统/用户信息模块.iml" filepath="$PROJECT_DIR$/src/小实例/在线考试系统/用户信息模块.iml" />
     </modules>
   </component>
 </project>

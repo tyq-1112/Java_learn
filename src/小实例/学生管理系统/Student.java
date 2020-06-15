@@ -1,4 +1,4 @@
-package 小实例.Student;
+package 小实例.学生管理系统;
 
 public class Student implements Comparable<Student> {
     private String name;

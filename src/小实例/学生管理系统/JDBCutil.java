@@ -1,4 +1,4 @@
-package 小实例.Student;
+package 小实例.学生管理系统;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -12,7 +12,7 @@ public class JDBCutil {
      * 静态代码块，只执行一次，
      */
     static {
-        rb = ResourceBundle.getBundle("小实例.Student.mysqlsource");
+        rb = ResourceBundle.getBundle("小实例.学生管理系统.mysqlsource");
         try {
             Class.forName(rb.getString("jdbc.Driver"));
         } catch (ClassNotFoundException e) {

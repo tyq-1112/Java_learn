@@ -1,4 +1,4 @@
-package 小实例.Student;
+package 小实例.学生管理系统;
 
 import java.sql.SQLException;
 import java.util.Arrays;
